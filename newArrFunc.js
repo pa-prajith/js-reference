@@ -89,5 +89,18 @@ function tester(number){
 // ES6
 // sampleArray.every( number => number > 0 );
 // sampleArray2.every( number => number > 0 );
-console.log(sampleArray.every(tester));
-console.log(sampleArray2.every(tester));
+console.log('every()',sampleArray.every(tester));
+console.log('every()',sampleArray2.every(tester));
+
+// FindIndex
+/*
+    findIndex()- returns index of the first element in a given array that satisfies the provided testing function. Otherwise -1 is returned
+    array.findIndex(function(currentValue, index, arr), thisValue)
+
+*/
+
+function isOdd(element, index, array) {
+    return (element%2 == 1);
+  }
+  
+console.log('findIndex()', [4, 6, 7, 12].findIndex(isOdd)); 
